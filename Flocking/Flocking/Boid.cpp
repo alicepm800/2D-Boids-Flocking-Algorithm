@@ -44,7 +44,7 @@ void Boid::RotateBoid()
 	}
 
 	//============================================================================================
-	//Use linear interpolation to reduce jitterniness of rotation
+	//Use linear interpolation to reduce jitteriness of rotation
 	m_rotation = Lerp(m_rotation, targetRotation, rotationSpeed);
 }
 
