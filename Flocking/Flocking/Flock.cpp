@@ -75,7 +75,7 @@ Vector2D Flock::Separation(int boidIndex)
 		//Find the distance between this boid and the rest of the boids in the flock
 		float distance = sqrt(pow(m_vFlock[boidIndex].m_pos.x - m_vFlock[i].m_pos.x, 2) + pow(m_vFlock[boidIndex].m_pos.y - m_vFlock[i].m_pos.y, 2));
 
-		//If distance of other boid is within the current boid's perception, sample the other boid's attribute
+		//If distance of other boid is close enough to current boid, find out how much you need to separate the two boids
 		if ((distance > 0) && (distance < desiredSeparation))
 		{
 			Vector2D positionDifference = Vector2D(0, 0);
